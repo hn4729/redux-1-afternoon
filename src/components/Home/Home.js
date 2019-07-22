@@ -13,11 +13,11 @@ class Home extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   store.subscribe(() => {
-  //     this.setState({ recipes: store.getState().recipes });
-  //   });
-  // }
+  componentDidMount() {
+    store.subscribe(() => {
+      this.setState({ recipes: store.getState().recipes });
+    });
+  }
 
   render() {
     const recipes = this.state.recipes.map((recipe, i) => {

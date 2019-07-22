@@ -66,9 +66,9 @@ function reducer(state = initialState, action) {
         recipes: [...state.recipes]
       };
     case DELETE_RECIPE:
-      let newState = { ...state };
-      newState.recipes.splice(action.payload, 1);
-      return { newState };
+      let newRecipes = [...state.recipes];
+      newRecipes.splice(action.payload, 1);
+      return { ...state, recipes: newRecipes };
     default:
       return state;
   }
