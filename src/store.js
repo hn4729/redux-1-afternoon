@@ -56,7 +56,15 @@ function reducer(state = initialState, action) {
       };
       return { ...state, recipes: [...state.recipes, recipe] };
     case CLEAR_FORM:
-      return { initialState, recipes: [...state.recipes] };
+      return {
+        name: "",
+        category: "",
+        first_name: "",
+        last_name: "",
+        ingredients: [],
+        instructions: [],
+        recipes: [...state.recipes]
+      };
     case DELETE_RECIPE:
       let newState = { ...state };
       newState.recipes.splice(action.payload, 1);

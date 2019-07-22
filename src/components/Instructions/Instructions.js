@@ -40,9 +40,9 @@ class Instructions extends Component {
     store.dispatch({
       type: UPDATE_RECIPES
     });
-    // store.dispatch({
-    //   type: CLEAR_FORM
-    // });
+    store.dispatch({
+      type: CLEAR_FORM
+    });
   }
   render() {
     const instructions = this.state.instructions.map((instruction, i) => {
